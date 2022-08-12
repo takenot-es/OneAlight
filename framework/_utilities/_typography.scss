@@ -1,0 +1,65 @@
+p {
+    font-family: $body--font-family;
+    font-weight: $body--font-weight;
+    font-size: $body--font-size;
+    line-height: $body--line-height;
+    margin-bottom: $body--space-after;
+}
+
+h1 {
+    @include headings($h--600);
+}
+
+h2 {
+    @include headings($h--500);
+}
+
+h3 {
+    @include headings($h--400);
+}
+
+h4 {
+    @include headings($h--300);
+}
+
+h5 {
+    @include headings($h--200);
+}
+
+h6 {
+    @include headings($h--100);
+}
+
+.large-heading--1 {
+    @include large-headings($h--900);
+}
+
+.large-heading--2 {
+    @include large-headings($h--800);
+}
+
+.large-heading--3 {
+    @include large-headings($h--700);
+}
+
+@each $size, $value in $font--sizes {
+    .heading--#{$size} {
+        @include headings($value);
+    }
+}
+
+@each $size, $value in $font--sizes {
+    .font-size--#{$size} {
+        font-size: $value;
+    }
+}
+
+.font-size--base {
+    font-size: $body--font-size;
+}
+
+@each $name, $value in $colors {
+    .font-color--#{$name} {
+        color: $value;
+    }
+}

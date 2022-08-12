@@ -1,0 +1,49 @@
+//Body -- Base variables
+$body--font-family:           "FSThriveElliot", sans-serif;
+$body--font-weight:            400;
+$body--font-color:             $black;
+$body--font-size:              1rem;
+$body--line-height:            1.5;
+$body--space-after:            $body--font-size;
+
+//Font Sizes
+$h--900:                       clamp(4rem,6vw,6rem);
+$h--800:                       clamp(3.75rem,6vw,5.5rem);
+$h--700:                       clamp(3.25rem,6vw,4.5rem);
+$h--600:                       clamp(2rem,4.25vw,$body--font-size * 2.5);
+$h--500:                       clamp(1.75rem,4.25vw,$body--font-size * 2);
+$h--400:                       clamp(1.5rem,4.25vw,$body--font-size * 1.75);
+$h--300:                       clamp(1.25rem,4.25vw,$body--font-size * 1.5);
+$h--200:                       clamp(1.15rem,4.25vw,$body--font-size * 1.25);
+$h--100:                       1rem;
+
+$font--sizes: () !default;
+$font--sizes: map-merge(
+    (
+        "900":$h--900,
+        "800":$h--800,
+        "700":$h--700,
+        "600":$h--600,
+        "500":$h--500,
+        "400":$h--400,
+        "300":$h--300,
+        "200":$h--200,
+        "100":$h--100,
+    ),
+    $font--sizes
+);
+
+//Heading
+$heading--line-height:          1.2;
+$heading--space-after:          $body--space-after;
+$heading--font-weight:          400;
+
+//Large headers
+$large-heading--line-height:    1.1;
+$large-heading--space-after:    $body--space-after * 1.25;
+$large-heading--font-weight:    300;
+
+//Modifiers
+$font--weights:                 300, 400, 700, 900;
+$text--transforms:              uppercase, lowercase, capitalize;
+$text--align:                   left, right, center;

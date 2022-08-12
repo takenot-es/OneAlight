@@ -1,0 +1,518 @@
+@font-face {
+  font-family: "FSThriveElliot";
+  font-weight: 300;
+  font-display: block;
+  font-style: normal;
+  src: url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Light.woff2") format("woff2"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Light.eot?#iefix") format("embedded-opentype"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Light.woff") format("woff"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Light.ttf") format("truetype"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Light.svg#FSThriveElliot-Light") format("svg");
+}
+@font-face {
+  font-family: "FSThriveElliot";
+  font-weight: 300;
+  font-display: block;
+  font-style: italic;
+  src: url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-LightItalic.woff2") format("woff2"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-LightItalic.eot?#iefix") format("embedded-opentype"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-LightItalic.woff") format("woff"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-LightItalic.ttf") format("truetype"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-LightItalic.svg#FSThriveElliot-Italic") format("svg");
+}
+@font-face {
+  font-family: "FSThriveElliot";
+  font-weight: 400;
+  font-display: block;
+  font-style: normal;
+  src: url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Regular.woff2") format("woff2"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Regular.eot?#iefix") format("embedded-opentype"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Regular.woff") format("woff"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Regular.ttf") format("truetype"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Regular.svg#FSThriveElliot-Regular") format("svg");
+}
+@font-face {
+  font-family: "FSThriveElliot";
+  font-weight: 400;
+  font-display: block;
+  font-style: italic;
+  src: url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Italic.woff2") format("woff2"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Italic.eot?#iefix") format("embedded-opentype"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Italic.woff") format("woff"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Italic.ttf") format("truetype"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Italic.svg#FSThriveElliot-Italic") format("svg");
+}
+@font-face {
+  font-family: "FSThriveElliot";
+  font-weight: 700;
+  font-display: block;
+  font-style: normal;
+  src: url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Bold.woff2") format("woff2"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Bold.eot?#iefix") format("embedded-opentype"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Bold.woff") format("woff"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Bold.ttf") format("truetype"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Bold.svg#FSThriveElliot-Bold") format("svg");
+}
+@font-face {
+  font-family: "FSThriveElliot";
+  font-weight: 700;
+  font-display: block;
+  font-style: italic;
+  src: url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-BoldItalic.woff2") format("woff2"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-BoldItalic.eot?#iefix") format("embedded-opentype"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-BoldItalic.woff") format("woff"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-BoldItalic.ttf") format("truetype"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-BoldItalic.svg#FSThriveElliot-BoldItalic") format("svg");
+}
+@font-face {
+  font-family: "FSThriveElliot";
+  font-weight: 900;
+  font-display: block;
+  font-style: normal;
+  src: url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Heavy.woff2") format("woff2"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Heavy.eot?#iefix") format("embedded-opentype"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Heavy.woff") format("woff"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Heavy.ttf") format("truetype"), url("https://go.alight.com/rs/777-ERD-451/images/FSThriveElliot-Heavy.svg#FSThriveElliot-Heavy") format("svg");
+}
+:root {
+  --yellow: #FFF200;
+  --yellow-100: #FFF200;
+  --yellow-50: #FEF790;
+  --yellow-40: #FEF8A5;
+  --yellow-30: #FFFABA;
+  --yellow-20: #FFFBD1;
+  --yellow-10: #FFFDE7;
+  --slate: #0A2029;
+  --slate-100: #0A2029;
+  --slate-90: #27363D;
+  --slate-80: #3E4D53;
+  --slate-70: #576368;
+  --slate-60: #6E797E;
+  --slate-50: #868F93;
+  --slate-40: #9FA6A9;
+  --slate-30: #B7BCBF;
+  --slate-20: #CFD2D4;
+  --slate-10: #E7E9EA;
+  --slate-05: #F3F4F4;
+  --black: #000000;
+  --black-100: #000000;
+  --black-90: #191919;
+  --black-80: #333333;
+  --black-70: #4C4C4C;
+  --black-60: #666666;
+  --black-50: #7F7F7F;
+  --black-40: #999999;
+  --black-30: #B2B2B2;
+  --black-20: #CCCCCC;
+  --black-10: #E5E5E5;
+  --white: #FFFFFF;
+  --dark: #2F4149;
+  --teal: #8FE4DE;
+  --blue: #A1C4FD;
+  --purple: #C4ABDA;
+  --orange: #FF9966;
+  --light: #F2F2F2;
+  --body--font-family: FSThriveElliot, sans-serif;
+  --body--font-color: #000000;
+  --body--font-weight: 400;
+  --body--font-size: 1rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "FSThriveElliot", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialised;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-family: "FSThriveElliot", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 4.25vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4.25vw, 2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 4.25vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 4.25vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  font-size: clamp(1.15rem, 4.25vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.large-heading--1 {
+  font-size: clamp(4rem, 6vw, 6rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.large-heading--2 {
+  font-size: clamp(3.75rem, 6vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.large-heading--3 {
+  font-size: clamp(3.25rem, 6vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.heading--900 {
+  font-size: clamp(4rem, 6vw, 6rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.heading--800 {
+  font-size: clamp(3.75rem, 6vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.heading--700 {
+  font-size: clamp(3.25rem, 6vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.heading--600 {
+  font-size: clamp(2rem, 4.25vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.heading--500 {
+  font-size: clamp(1.75rem, 4.25vw, 2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.heading--400 {
+  font-size: clamp(1.5rem, 4.25vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.heading--300 {
+  font-size: clamp(1.25rem, 4.25vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.heading--200 {
+  font-size: clamp(1.15rem, 4.25vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.heading--100 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.font-size--900 {
+  font-size: clamp(4rem, 6vw, 6rem);
+}
+
+.font-size--800 {
+  font-size: clamp(3.75rem, 6vw, 5.5rem);
+}
+
+.font-size--700 {
+  font-size: clamp(3.25rem, 6vw, 4.5rem);
+}
+
+.font-size--600 {
+  font-size: clamp(2rem, 4.25vw, 2.5rem);
+}
+
+.font-size--500 {
+  font-size: clamp(1.75rem, 4.25vw, 2rem);
+}
+
+.font-size--400 {
+  font-size: clamp(1.5rem, 4.25vw, 1.75rem);
+}
+
+.font-size--300 {
+  font-size: clamp(1.25rem, 4.25vw, 1.5rem);
+}
+
+.font-size--200 {
+  font-size: clamp(1.15rem, 4.25vw, 1.25rem);
+}
+
+.font-size--100 {
+  font-size: 1rem;
+}
+
+.font-size--base {
+  font-size: 1rem;
+}
+
+.font-color--yellow {
+  color: #FFF200;
+}
+
+.font-color--yellow-100 {
+  color: #FFF200;
+}
+
+.font-color--yellow-50 {
+  color: #FEF790;
+}
+
+.font-color--yellow-40 {
+  color: #FEF8A5;
+}
+
+.font-color--yellow-30 {
+  color: #FFFABA;
+}
+
+.font-color--yellow-20 {
+  color: #FFFBD1;
+}
+
+.font-color--yellow-10 {
+  color: #FFFDE7;
+}
+
+.font-color--slate {
+  color: #0A2029;
+}
+
+.font-color--slate-100 {
+  color: #0A2029;
+}
+
+.font-color--slate-90 {
+  color: #27363D;
+}
+
+.font-color--slate-80 {
+  color: #3E4D53;
+}
+
+.font-color--slate-70 {
+  color: #576368;
+}
+
+.font-color--slate-60 {
+  color: #6E797E;
+}
+
+.font-color--slate-50 {
+  color: #868F93;
+}
+
+.font-color--slate-40 {
+  color: #9FA6A9;
+}
+
+.font-color--slate-30 {
+  color: #B7BCBF;
+}
+
+.font-color--slate-20 {
+  color: #CFD2D4;
+}
+
+.font-color--slate-10 {
+  color: #E7E9EA;
+}
+
+.font-color--slate-05 {
+  color: #F3F4F4;
+}
+
+.font-color--black {
+  color: #000000;
+}
+
+.font-color--black-100 {
+  color: #000000;
+}
+
+.font-color--black-90 {
+  color: #191919;
+}
+
+.font-color--black-80 {
+  color: #333333;
+}
+
+.font-color--black-70 {
+  color: #4C4C4C;
+}
+
+.font-color--black-60 {
+  color: #666666;
+}
+
+.font-color--black-50 {
+  color: #7F7F7F;
+}
+
+.font-color--black-40 {
+  color: #999999;
+}
+
+.font-color--black-30 {
+  color: #B2B2B2;
+}
+
+.font-color--black-20 {
+  color: #CCCCCC;
+}
+
+.font-color--black-10 {
+  color: #E5E5E5;
+}
+
+.font-color--white {
+  color: #FFFFFF;
+}
+
+.font-color--dark {
+  color: #2F4149;
+}
+
+.font-color--teal {
+  color: #8FE4DE;
+}
+
+.font-color--blue {
+  color: #A1C4FD;
+}
+
+.font-color--purple {
+  color: #C4ABDA;
+}
+
+.font-color--orange {
+  color: #FF9966;
+}
+
+.font-color--light {
+  color: #F2F2F2;
+}
+
+/*# sourceMappingURL=illuminati.css.map */

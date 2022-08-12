@@ -1,0 +1,11 @@
+:root {
+    // Colors
+    @each $name, $value in $colors {
+        --#{$name}: #{$value};
+    }
+    // Fonts
+    --body--font-family: #{$body--font-family};
+    --body--font-color: #{$body--font-color};
+    --body--font-weight: #{$body--font-weight};
+    --body--font-size: #{$body--font-size};
+  }
