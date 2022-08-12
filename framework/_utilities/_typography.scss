@@ -59,7 +59,7 @@ h6 {
 }
 
 @each $name, $value in $colors {
-    .font-color--#{$name} {
+    .text-color--#{$name} {
         color: $value;
     }
 }

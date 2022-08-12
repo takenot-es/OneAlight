@@ -1,0 +1,49 @@
+.grid,
+.grid--fluid,
+.grid--sm,
+.grid--md,
+.grid--lg,
+.grid--xl {
+  @include create--grid;
+}
+
+
+@each $breakpoint, $breakpoint-size in $grid-breakpoints {
+    @each $size, $grid-size in $grid-max-width {
+        @if $breakpoint == $size {
+            @media screen and (min-width: $breakpoint-size) {
+                .grid--#{$size}, .grid {
+                    max-width: $grid-size;
+                }
+            }
+        }
+    }
+}
+
+.grid--row {
+    @include create-grid-row;
+}
+
+@for $i from 1 through $grid--columns {
+    .cell--#{$i} {
+        flex: 0 0 percentage($i/$grid--columns);
+        max-width: percentage($i/$grid--columns);
+        @include create-grid-cell;
+    }
+}
+
+@each $breakpoint, $breakpoint-size in $grid-breakpoints {
+    @each $size, $grid-size in $grid-max-width {
+        @if $breakpoint == $size {
+            @media screen and (min-width: $breakpoint-size) {
+                @for $i from 1 through $grid--columns {
+                    .cell--#{$size}-#{$i} {
+                        flex: 0 0 percentage($i/$grid--columns);
+                        max-width: percentage($i/$grid--columns);
+                        @include create-grid-cell;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -5,9 +5,21 @@ $breakpoint--lg: 992px;
 $breakpoint--xl: 1200px;
 
 $grid-breakpoints: (
-    "xs":$breakpoint--xs,
     "sm":$breakpoint--sm,
     "md":$breakpoint--md,
     "lg":$breakpoint--lg,
     "xl":$breakpoint--xl,
 ) !default;
+
+// Grid containers
+$grid-max-width: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+) !default;
+
+// Grid columns
+$grid--columns:                12 !default;
+$grid--gutter-width:           30px !default;
+$grid--row-columns:            6 !default;
