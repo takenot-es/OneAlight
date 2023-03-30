@@ -1,0 +1,36 @@
+// Base type styles are handled in _reboot.scss. This is just modifiers.
+@use "sass:math";
+.type {
+    @each $modifier, $value in $theme-colors {
+        &__color-#{$modifier} {
+            color: $value !important;
+        }
+    } 
+
+    @each  $value in $font-weights {
+        &__weight-#{$value} {
+            font-weight: $value !important;
+        }
+    } 
+
+    @each  $modifier, $value in $type-sizes {
+        &__size-#{$modifier} {
+            font-size: $value !important;
+
+            @for $i from 1 through 7 {
+                @if $i == $modifier {
+                    line-height: 1.2;
+                    margin-bottom: $header-margin;
+                }
+            }
+
+            @for $i from 1 through 4 {
+                @if $i == $modifier {
+                    font-weight: $header-font-weight;
+                }
+            }
+
+        }
+    }
+
+}

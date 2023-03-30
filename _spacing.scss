@@ -1,0 +1,164 @@
+.section__padding, .section__padding-y, .section__padding-t {
+    padding-top: $spacer-5;
+}
+
+.section__padding, .section__padding-y, .section__padding-b {
+    padding-bottom: $spacer-5;
+}
+
+.section__padding, .section__padding-x, .section__padding-l {
+    padding-left: $spacer-5;
+}
+
+.section__padding, .section__padding-x, .section__padding-r {
+    padding-right: $spacer-5;
+}
+
+.section__margin, .section__margin-y, .section__margin-t {
+    margin-top: $spacer-5;
+}
+
+.section__margin, .section__margin-y, .section__margin-b {
+    margin-bottom: $spacer-5;
+}
+
+.section__margin, .section__margin-x, .section__margin-l {
+    margin-left: $spacer-5;
+}
+
+.section__margin, .section__margin-x, .section__margin-r {
+    margin-right: $spacer-5;
+}
+
+@each $value in $sizing-values {
+    .height__viewport-#{$value} {
+        height: 100%;
+        min-height: #{$value}vh;
+    }
+
+    .height__percent-#{$value} {
+        height: #{$value} + "%";
+    }
+
+    @each $breakpoint-title, $breakpoint-value in $grid-breakpoints {
+        @media screen and (min-width: $breakpoint-value) {
+            .height__viewport-#{$breakpoint-title}-#{$value} {
+                height: 100%;
+                min-height: #{$value}vh;
+            }
+        
+            .height__percent-#{$breakpoint-title}-#{$value} {
+                height: #{$value} + "%";
+            }
+        }
+    }
+
+    
+}
+
+
+
+
+@each $spacing-title, $spacing-value in $spacers {
+    @each $unit in $units {
+        @each $side in $sides {
+            @if $unit == "padding" {
+                .#{$unit}__#{$side}-#{$spacing-title} {
+                    #{$unit}-#{$side}: $spacing-value;
+                }
+            }
+        }
+    }
+}
+
+@each $unit in $units {
+    @each $side in $sides {
+        @if $unit == "margin" {
+            .#{$unit}__#{$side}-auto {
+                #{$unit}-#{$side}: auto;
+            }
+        }
+    }
+}
+
+@each $spacing-title, $spacing-value in $spacers {
+    @each $unit in $units {
+        @each $side in $sides {
+            @if $unit == "margin" {
+                .#{$unit}__#{$side}-#{$spacing-title} {
+                    #{$unit}-#{$side}: $spacing-value;
+                }
+            }
+        }
+    }
+}
+
+@each $spacing-title, $spacing-value in $spacers {
+    @each $unit in $units {
+        @each $side in $sides {
+            @if $unit == "margin" {
+                .#{$unit}__negative-#{$side}-#{$spacing-title} {
+                    #{$unit}-#{$side}: -$spacing-value;
+                }
+            }
+        }
+    }
+}
+
+@each $breakpoint-title, $breakpoint-value in $grid-breakpoints {
+    @if $breakpoint-value != 0 {
+        @media screen and (min-width: $breakpoint-value) {
+
+
+            @each $spacing-title, $spacing-value in $spacers {
+                @each $unit in $units {
+                    @each $side in $sides {
+                        @if $unit == "padding" {
+                            .#{$unit}__#{$side}-#{$breakpoint-title}-#{$spacing-title} {
+                                #{$unit}-#{$side}: $spacing-value;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @each $unit in $units {
+                @each $side in $sides {
+                    @if $unit == "margin" {
+                        .#{$unit}__#{$side}-#{$breakpoint-title}-auto {
+                            #{$unit}-#{$side}: auto;
+                        }
+                    }
+                }
+            }
+            
+            @each $spacing-title, $spacing-value in $spacers {
+                @each $unit in $units {
+                    @each $side in $sides {
+                        @if $unit == "margin" {
+                            .#{$unit}__#{$side}-#{$breakpoint-title}-#{$spacing-title} {
+                                #{$unit}-#{$side}: $spacing-value;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @each $spacing-title, $spacing-value in $spacers {
+                @each $unit in $units {
+                    @each $side in $sides {
+                        @if $unit == "margin" {
+                            .#{$unit}__negative-#{$breakpoint-title}-#{$side}-#{$spacing-title} {
+                                #{$unit}-#{$side}: -$spacing-value;
+                            }
+                        }
+                    }
+                }
+            }
+
+            
+            
+        }
+    }
+}
+
