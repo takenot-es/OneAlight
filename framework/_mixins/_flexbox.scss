@@ -1,9 +1,0 @@
-@mixin flex-direction ($direction) {
-    -ms-flex-direction: $direction;
-    flex-direction: $direction;
-}
-
-@mixin flex-wrap ($wrap) {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
