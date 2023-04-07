@@ -1,0 +1,9 @@
+.border__radius  {
+    @each $corner in $section-border-corners {
+        @each $radius in $border-radius {
+            &-#{$radius}, &-#{$corner}-#{$radius} {
+                border-#{$corner}-radius: $radius + px !important;
+            }
+        }
+    }
+}

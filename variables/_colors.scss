@@ -74,6 +74,18 @@ $theme-colors: (
 "light": $light, 
 ) !default;
 
+$core-colors: (
+    "yellow-100": $yellow-100,
+    "slate-100": $slate-100,
+    "black": $black,
+    "white": $white,
+    "orange": $orange,
+    "teal": $teal,
+    "blue": $blue,
+    "purple": $purple,
+    "light": $light,
+) !default;
+
 //Opacity Ranges
 $ranges: (00, 05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95) !default;
 
